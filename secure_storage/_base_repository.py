@@ -1,14 +1,14 @@
 """Abstract class for repository type classes."""
 import abc
 
-from secure_storage.model import IModel
+from secure_storage._base_entity import BaseEntity
 
 
 class AbstractRepository(abc.ABC):
     """Defines an interface for repository family type classes."""
 
     @abc.abstractmethod
-    def add(self, model: IModel) -> None:
+    def add(self, model: BaseEntity) -> None:
         """Add an ``Order`` object to our persistent storage.
 
         Args:
@@ -21,7 +21,7 @@ class AbstractRepository(abc.ABC):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def get(self, order_id: int) -> IModel:
+    def get(self, order_id: int) -> BaseEntity:
         """Get an order from our persistent storage.
 
         Args:

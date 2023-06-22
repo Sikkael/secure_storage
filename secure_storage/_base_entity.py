@@ -1,5 +1,5 @@
 from abc import ABC
 
 
-class IModel(ABC):
+class BaseEntity(ABC):
     pass
