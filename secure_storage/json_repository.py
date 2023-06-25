@@ -1,12 +1,31 @@
-from _base_repository import *
+from irepository import *
 
 
-class JsonRepository(AbstractRepository):
+class Entity:
+    pass
 
-    def add(self, model: BaseEntity) -> None:
+
+class JsonRepository(IRepository):
+
+    def get_all(self):
         pass
 
-    def get(self, order_id: int) -> BaseEntity:
+    def get_by_id(self, _id):
+        pass
+
+    def create(self, item):
+        pass
+
+    def update(self, item):
+        pass
+
+    def delete(self, _id):
+        pass
+
+    def add(self, entity) -> None:
+        pass
+ 
+    def get(self, order_id: int) -> Entity:
         pass
 
     def list(self) -> list:
